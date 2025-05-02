@@ -1,6 +1,6 @@
 package com.ms.user.controllers;
 
-import com.ms.user.dtos.UserRecordDto;
+import com.ms.user.dtos.UserRecordDTO;
 import com.ms.user.models.UserModel;
 import com.ms.user.services.UserService;
 import jakarta.validation.Valid;
@@ -21,7 +21,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<UserModel> saveUser(@RequestBody @Valid UserRecordDto userRecordDto) {
+    public ResponseEntity<UserModel> saveUser(@RequestBody @Valid UserRecordDTO userRecordDto) {
         var userModel = new UserModel();
         BeanUtils.copyProperties(userRecordDto, userModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(userService.save(userModel));
