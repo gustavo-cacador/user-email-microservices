@@ -20,7 +20,9 @@ ms-email: serviço responsável pelo envio de e-mails de notificação.
 - Serviço de E-mail: SMTP Gmail
 
 ## Endpoint
+```
 - POST /users: Criar um novo Usuário
+```
 
 ## Configuração e Execução
 
